@@ -1,5 +1,4 @@
 import { MouseEventHandler } from "react";
-import { Tracing } from "trace_events";
 
 export interface CustomButtonProps {
     title: string;
@@ -13,8 +12,8 @@ export interface CustomButtonProps {
 }
 
 export interface SearchManufacturersProps {
-    manufacturer: string;
-    setManufacturer: (manufacturer: string) => void;
+    selected: string;
+    setSelected: (selected: string) => void;
 }
 
 export interface CarProps {
@@ -52,9 +51,11 @@ export interface OptionProps {
 export interface CustomFilterProps {
     title: string;
     options: OptionProps[];
+    setFilter: (value: string) => void;
 }
 
 export interface showMoreProps {
     pageNumber: number;
     isNext: boolean;
+    setLimit: (pageNumber: number) => void;
 }
